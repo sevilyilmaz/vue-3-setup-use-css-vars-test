@@ -5,6 +5,6 @@ describe('HelloWorld', () => {
   it('renders with correct classes', () => {
     const wrapper = mount(HelloWorld);
 
-    expect(wrapper.classes()).toEqual(['foo']);
+    expect(wrapper.classes()).toEqual(['root']);
   });
 });
