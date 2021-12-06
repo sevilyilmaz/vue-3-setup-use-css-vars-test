@@ -2,14 +2,10 @@
 import { ref, computed, useCssModule } from 'vue';
 
 export default {
-  props: {
-    blue: false,
-  },
   setup(props) {
     const styles = useCssModule();
     const rootClasses = computed(() => ({
       [styles.root]: true,
-      [styles['root-blue']]: props.blue,
     }));
 
     return { rootClasses };
