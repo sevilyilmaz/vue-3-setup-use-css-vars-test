@@ -2,6 +2,9 @@
 import { ref, computed, useCssModule } from 'vue';
 
 export default {
+  props: {
+    msg: String,
+  },
   setup(props) {
     const styles = useCssModule();
     const rootClasses = computed(() => ({
