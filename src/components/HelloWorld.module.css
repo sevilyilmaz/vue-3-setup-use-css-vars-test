@@ -1,0 +1,20 @@
+:root {
+  --theme_color_background_base: #f00;
+}
+
+@define-mixin hover {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--theme_color_background_base);
+}
+
+.root {
+  color: #42b983;
+}
+
+.root-blue {
+  color: blue;
+}
+
+.root:hover {
+  @mixin hover;
+}
