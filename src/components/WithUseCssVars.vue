@@ -1,14 +1,22 @@
 <script>
-import { ref, computed, useCssModule } from 'vue';
+import { ref, computed, useCssVars, useCssModule } from 'vue';
 
 export default {
   props: {
     msg: String,
+    padding: {
+      type: Number,
+      default: 4
+    }
   },
   setup(props) {
     const styles = useCssModule();
     const rootClasses = computed(() => ({
       [styles.root]: true,
+    }));
+
+    useCssVars(() => ({
+      p: props.padding
     }));
 
     return { rootClasses };
@@ -20,4 +28,8 @@ export default {
   <div :class="rootClasses">{{ msg }}</div>
 </template>
 
-<style src="./HelloWorld.module.css" module />
+<style module>
+.root {
+  padding: calc(2 * var(--p));
+}
+</style>

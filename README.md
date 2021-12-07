@@ -1,2 +1,2 @@
-- Run `yarn dev` to see the mixin work
+- Run `yarn dev` to see the inline CSS variable work
 - Run `yarn test` to see the error

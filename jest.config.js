@@ -1,13 +1,8 @@
 module.exports = {
-  collectCoverageFrom: ['src/**/*.{js,vue}'],
-  coverageReporters: ['text', 'cobertura', 'json', 'lcov', 'clover'],
-  coverageProvider: 'v8',
   errorOnDeprecated: true,
   moduleFileExtensions: ['js', 'json', 'vue'],
-  notify: false,
   snapshotSerializers: ['<rootDir>/node_modules/jest-serializer-vue'],
   testEnvironment: 'jest-environment-jsdom',
-  testPathIgnorePatterns: ['<rootDir>/cypress/'],
   testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(test).[jt]s?(x)'],
   testURL: 'http://localhost',
   transform: {
